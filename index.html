@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
-    <title>Title</title>
+    <title>MidiMusic</title>
     <style>
         html, body {
             margin: 0;
@@ -164,11 +164,12 @@
 
             flex-wrap: wrap;
         }
+
         #message em {
-            width:10px;
-            padding:0;
-            margin:0;
-            overflow:visible;
+            width: 10px;
+            padding: 0;
+            margin: 0;
+            overflow: visible;
 
         }
 
@@ -421,7 +422,7 @@
       let map = {}
       Object.entries(this.scale).forEach((a, b) => {
         if (b >= this.base && b < this.base + this.allKeys.length) {
-          console.log(this.allKeys[b - this.base])
+
           map[this.allKeys[b - this.base]] = {
             'frequency': a[1][0],
             'note': a[0],
@@ -465,14 +466,11 @@
           this.keys[newNote.position].classList.add('active')
         }
       }
-      console.log(messageElement)
       messageElement.classList.add('active')
-      console.log(messageElement)
-
     }
 
     findEm (e) {
-      // console.log(e)
+
       e = e.querySelector('.active')
       if (e) e.classList.remove('active')
 
